@@ -436,7 +436,7 @@ Entry.AsomeBot.getBlocks = function() {
                     script.is_started = true;
                     script.msg_id = random_str(16);
                     sq.msg_id = script.msg_id;
-                    sq.msg = format_str("music.note('{0}', {1})", value1, String(value2));
+                    sq.msg = format_str("import music; music.note('{0}', {1})", value1, String(value2));
                     return script;
                 }
 
@@ -505,7 +505,7 @@ Entry.AsomeBot.getBlocks = function() {
                     script.is_started = true;
                     script.msg_id = random_str(16);
                     sq.msg_id = script.msg_id;
-                    sq.msg = format_str('music.tone({0}, {1})', value1, String(value2));
+                    sq.msg = format_str('import music; music.tone({0}, {1})', value1, String(value2));
                     return script;
                 }
 
@@ -548,7 +548,7 @@ Entry.AsomeBot.getBlocks = function() {
                     script.msg_id = random_str(16);
                     sq.msg_id = script.msg_id;
                     sq.msg =
-                        'turnoff_pins( (1, 5, 6, 7, 8) ); import asomebot; asomebot.ready(5, 6, 7,8)';
+                        'turnoff_pins( (1, 5, 6, 7, 8) ); import asomebot; import hcsr04; asomebot.ready(5, 6, 7,8); hcsr04.open(3, 2)';
                     return script;
                 }
 
@@ -642,7 +642,7 @@ Entry.AsomeBot.getBlocks = function() {
                     script.msg_id = random_str(16);
                     sq.msg_id = script.msg_id;
                     sq.msg = format_str(
-                        'asomebot.align({0}, {1}, {2}, {3})',
+                        'import asomebot; import hcsr04; asomebot.ready(5, 6, 7,8); hcsr04.open(3, 2); asomebot.align({0}, {1}, {2}, {3})',
                         value1,
                         value2,
                         value3,
@@ -689,7 +689,7 @@ Entry.AsomeBot.getBlocks = function() {
                     script.is_started = true;
                     script.msg_id = random_str(16);
                     sq.msg_id = script.msg_id;
-                    sq.msg = format_str('asomebot.home()');
+                    sq.msg = format_str('import asomebot; import hcsr04; asomebot.ready(5, 6, 7,8); hcsr04.open(3, 2); asomebot.home()');
                     return script;
                 }
 
@@ -770,7 +770,7 @@ Entry.AsomeBot.getBlocks = function() {
                     script.msg_id = random_str(16);
                     sq.msg_id = script.msg_id;
                     sq.msg = format_str(
-                        'asomebot.angles( [{0}], [{1}], {2})',
+                        'import asomebot; import hcsr04; asomebot.ready(5, 6, 7,8); hcsr04.open(3, 2); asomebot.angles( [{0}], [{1}], {2})',
                         value1,
                         value2,
                         String(value3)
@@ -816,7 +816,7 @@ Entry.AsomeBot.getBlocks = function() {
                     script.is_started = true;
                     script.msg_id = random_str(16);
                     sq.msg_id = script.msg_id;
-                    sq.msg = format_str('asomebot.forward()');
+                    sq.msg = format_str('import asomebot; import hcsr04; asomebot.ready(5, 6, 7,8); hcsr04.open(3, 2); asomebot.forward()');
                     return script;
                 }
 
@@ -858,7 +858,7 @@ Entry.AsomeBot.getBlocks = function() {
                     script.is_started = true;
                     script.msg_id = random_str(16);
                     sq.msg_id = script.msg_id;
-                    sq.msg = format_str('asomebot.backward()');
+                    sq.msg = format_str('import asomebot; import hcsr04; asomebot.ready(5, 6, 7,8); hcsr04.open(3, 2); asomebot.backward()');
                     return script;
                 }
 
@@ -900,7 +900,7 @@ Entry.AsomeBot.getBlocks = function() {
                     script.is_started = true;
                     script.msg_id = random_str(16);
                     sq.msg_id = script.msg_id;
-                    sq.msg = format_str('asomebot.turn_left()');
+                    sq.msg = format_str('import asomebot; import hcsr04; asomebot.ready(5, 6, 7,8); hcsr04.open(3, 2); asomebot.turn_left()');
                     return script;
                 }
 
@@ -942,7 +942,7 @@ Entry.AsomeBot.getBlocks = function() {
                     script.is_started = true;
                     script.msg_id = random_str(16);
                     sq.msg_id = script.msg_id;
-                    sq.msg = format_str('asomebot.turn_right()');
+                    sq.msg = format_str('import asomebot; import hcsr04; asomebot.ready(5, 6, 7,8); hcsr04.open(3, 2); asomebot.turn_right()');
                     return script;
                 }
 
@@ -1011,7 +1011,7 @@ Entry.AsomeBot.getBlocks = function() {
                     script.is_started = true;
                     script.msg_id = random_str(16);
                     sq.msg_id = script.msg_id;
-                    sq.msg = format_str('asomebot.forward(s1={0}, s2={1})', value1, value2);
+                    sq.msg = format_str('import asomebot; import hcsr04; asomebot.ready(5, 6, 7,8); hcsr04.open(3, 2); asomebot.forward(s1={0}, s2={1})', value1, value2);
                     return script;
                 }
 
@@ -1080,7 +1080,7 @@ Entry.AsomeBot.getBlocks = function() {
                     script.is_started = true;
                     script.msg_id = random_str(16);
                     sq.msg_id = script.msg_id;
-                    sq.msg = format_str('asomebot.backward(s1={0}, s2={1})', value1, value2);
+                    sq.msg = format_str('import asomebot; import hcsr04; asomebot.ready(5, 6, 7,8); hcsr04.open(3, 2); asomebot.backward(s1={0}, s2={1})', value1, value2);
                     return script;
                 }
 
@@ -1138,7 +1138,7 @@ Entry.AsomeBot.getBlocks = function() {
                     script.is_started = true;
                     script.msg_id = random_str(16);
                     sq.msg_id = script.msg_id;
-                    sq.msg = format_str('asomebot.turn_left(s={0})', value1);
+                    sq.msg = format_str('import asomebot; import hcsr04; asomebot.ready(5, 6, 7,8); hcsr04.open(3, 2); asomebot.turn_left(s={0})', value1);
                     return script;
                 }
 
@@ -1196,7 +1196,7 @@ Entry.AsomeBot.getBlocks = function() {
                     script.is_started = true;
                     script.msg_id = random_str(16);
                     sq.msg_id = script.msg_id;
-                    sq.msg = format_str('asomebot.turn_right(s={0})', value1);
+                    sq.msg = format_str('import asomebot; import hcsr04; asomebot.ready(5, 6, 7,8); hcsr04.open(3, 2); asomebot.turn_right(s={0})', value1);
                     return script;
                 }
 
@@ -1256,7 +1256,7 @@ Entry.AsomeBot.getBlocks = function() {
                     script.is_started = true;
                     script.msg_id = random_str(16);
                     sq.msg_id = script.msg_id;
-                    sq.msg = format_str('asomebot.mouse({0})', value);
+                    sq.msg = format_str('import asomebot; import hcsr04; asomebot.ready(5, 6, 7,8); hcsr04.open(3, 2); asomebot.mouse({0})', value);
                     return script;
                 }
 
@@ -1298,7 +1298,7 @@ Entry.AsomeBot.getBlocks = function() {
                     script.is_started = true;
                     script.msg_id = random_str(16);
                     sq.msg_id = script.msg_id;
-                    sq.msg = format_str('asomebot.flap()');
+                    sq.msg = format_str('import asomebot; import hcsr04; asomebot.ready(5, 6, 7,8); hcsr04.open(3, 2); asomebot.flap()');
                     return script;
                 }
 
@@ -1340,7 +1340,7 @@ Entry.AsomeBot.getBlocks = function() {
                     script.is_started = true;
                     script.msg_id = random_str(16);
                     sq.msg_id = script.msg_id;
-                    sq.msg = format_str('asomebot.warigari()');
+                    sq.msg = format_str('import asomebot; import hcsr04; asomebot.ready(5, 6, 7,8); hcsr04.open(3, 2); asomebot.warigari()');
                     return script;
                 }
 
@@ -1398,7 +1398,7 @@ Entry.AsomeBot.getBlocks = function() {
                     script.is_started = true;
                     script.msg_id = random_str(16);
                     sq.msg_id = script.msg_id;
-                    sq.msg = format_str('asomebot.tock({0})', value);
+                    sq.msg = format_str('import asomebot; import hcsr04; asomebot.ready(5, 6, 7,8); hcsr04.open(3, 2); asomebot.tock({0})', value);
                     return script;
                 }
 
@@ -1440,7 +1440,7 @@ Entry.AsomeBot.getBlocks = function() {
                     script.is_started = true;
                     script.msg_id = random_str(16);
                     sq.msg_id = script.msg_id;
-                    sq.msg = format_str('asomebot.tick_tock()');
+                    sq.msg = format_str('import asomebot; import hcsr04; asomebot.ready(5, 6, 7,8); hcsr04.open(3, 2); asomebot.tick_tock()');
                     return script;
                 }
 
@@ -1482,7 +1482,7 @@ Entry.AsomeBot.getBlocks = function() {
                     script.is_started = true;
                     script.msg_id = random_str(16);
                     sq.msg_id = script.msg_id;
-                    sq.msg = format_str('asomebot.wiggle()');
+                    sq.msg = format_str('import asomebot; import hcsr04; asomebot.ready(5, 6, 7,8); hcsr04.open(3, 2); asomebot.wiggle()');
                     return script;
                 }
 
@@ -1524,7 +1524,7 @@ Entry.AsomeBot.getBlocks = function() {
                     script.is_started = true;
                     script.msg_id = random_str(16);
                     sq.msg_id = script.msg_id;
-                    sq.msg = format_str('asomebot.swing()');
+                    sq.msg = format_str('import asomebot; import hcsr04; asomebot.ready(5, 6, 7,8); hcsr04.open(3, 2); asomebot.swing()');
                     return script;
                 }
 
@@ -1566,7 +1566,7 @@ Entry.AsomeBot.getBlocks = function() {
                     script.is_started = true;
                     script.msg_id = random_str(16);
                     sq.msg_id = script.msg_id;
-                    sq.msg = format_str('asomebot.ballet()');
+                    sq.msg = format_str('import asomebot; import hcsr04; asomebot.ready(5, 6, 7,8); hcsr04.open(3, 2); asomebot.ballet()');
                     return script;
                 }
 
@@ -1608,7 +1608,7 @@ Entry.AsomeBot.getBlocks = function() {
                     script.is_started = true;
                     script.msg_id = random_str(16);
                     sq.msg_id = script.msg_id;
-                    sq.msg = format_str('asomebot.yaho()');
+                    sq.msg = format_str('import asomebot; import hcsr04; asomebot.ready(5, 6, 7,8); hcsr04.open(3, 2); asomebot.yaho()');
                     return script;
                 }
 
@@ -1667,9 +1667,9 @@ Entry.AsomeBot.getBlocks = function() {
                     script.msg_id = random_str(16);
                     sq.msg_id = script.msg_id;
                     if (value == '1') {
-                        sq.msg = format_str('asomebot.left_swing()');
+                        sq.msg = format_str('import asomebot; import hcsr04; asomebot.ready(5, 6, 7,8); hcsr04.open(3, 2); asomebot.left_swing()');
                     } else {
-                        sq.msg = format_str('asomebot.right_swing()');
+                        sq.msg = format_str('import asomebot; import hcsr04; asomebot.ready(5, 6, 7,8); hcsr04.open(3, 2); asomebot.right_swing()');
                     }
                     return script;
                 }
@@ -1712,7 +1712,7 @@ Entry.AsomeBot.getBlocks = function() {
                     script.is_started = true;
                     script.msg_id = random_str(16);
                     sq.msg_id = script.msg_id;
-                    sq.msg = format_str('asomebot.moonwalk()');
+                    sq.msg = format_str('import asomebot; import hcsr04; asomebot.ready(5, 6, 7,8); hcsr04.open(3, 2); asomebot.moonwalk()');
                     return script;
                 }
 
@@ -1947,7 +1947,7 @@ Entry.AsomeBot.getBlocks = function() {
 
                 if (tick - sprite.old_tick > 300) {
                     sq.msg_id = random_str(16);
-                    sq.msg = 'udp_socket.read_text()';
+                    sq.msg = 'import udp_socket; udp_socket.read_text()';
                     sprite.old_tick = tick;
                 }
 
